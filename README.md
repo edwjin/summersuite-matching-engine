@@ -28,6 +28,10 @@ Given a user and a list of candidate roommates, the engine:
 
 ## Status
 
-The filter and scoring logic here is complete for the v1 matching pipeline. Verification scripts are included under `matching/test_*.py` covering the filters, factors, eligibility check, engine scoring, and the full ranking pipeline — these currently print actual vs. expected output for manual verification rather than using an assertion-based test framework; converting them to `pytest` is a near-term next step.
+The filter and scoring logic here is complete for the v1 matching pipeline. The `matching/` folder includes a `unittest`-based test suite (`test_eligibility.py`, `test_engine.py`, `test_factors.py`, `test_pipeline.py`) covering the hard filters, individual scoring factors, the overall match-score calculation, and the end-to-end ranking pipeline. Run the full suite with:
+
+\`\`\`
+python3 -m unittest discover
+\`\`\`
 
 This is the backend for a larger full-stack project — a teammate is building the React/TypeScript frontend and we're integrating against a shared Supabase database.
