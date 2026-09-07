@@ -19,6 +19,7 @@ Given a user and a list of candidate roommates, the engine:
 - `matching/eligibility.py` — runs a candidate through all active hard filters
 - `matching/engine.py` — computes a weighted match score (0–1) across all active scoring factors, skipping unanswered fields rather than penalizing them
 - `matching/pipeline.py` — ties it together: filters candidates, scores the eligible ones, returns them ranked
+- `schema.sql` — the Supabase table schema (users and connections tables) that the matching engine's filters and scoring factors are built against
 
 ## Design notes
 
@@ -30,8 +31,8 @@ Given a user and a list of candidate roommates, the engine:
 
 The filter and scoring logic here is complete for the v1 matching pipeline. The `matching/` folder includes a `unittest`-based test suite (`test_eligibility.py`, `test_engine.py`, `test_factors.py`, `test_pipeline.py`) covering the hard filters, individual scoring factors, the overall match-score calculation, and the end-to-end ranking pipeline. Run the full suite with:
 
-\`\`\`
+```
 python3 -m unittest discover
-\`\`\`
+```
 
 This is the backend for a larger full-stack project — a teammate is building the React/TypeScript frontend and we're integrating against a shared Supabase database.
