@@ -1,6 +1,6 @@
 # SummerSuite — Matching Engine
 
-Backend matching logic for **SummerSuite**, a roommate-matching platform for interns and new grads relocating to a new city for work. This repo contains the matching engine specifically — the piece of the larger team project I designed and built.
+Backend matching logic for **SummerSuite**, a roommate-matching platform for interns and new grads relocating to a new city for work. This repo contains the matching engine specifically — the piece of the platform I designed and built first.
 
 ## What it does
 
