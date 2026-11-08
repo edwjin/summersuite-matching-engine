@@ -35,4 +35,4 @@ The filter and scoring logic here is complete for the v1 matching pipeline. The 
 python3 -m unittest discover
 ```
 
-This is the backend for a larger full-stack project — a teammate is building the React/TypeScript frontend and we're integrating against a shared Supabase database.
+This repo contains the backend of the complete SummerSuite MVP. After early team development, I assumed sole ownership of the platform — hand-building this backend and rebuilding the React frontend — and shipped the MVP solo, ready for pilot launch.
